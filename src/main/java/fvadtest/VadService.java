@@ -6,13 +6,14 @@ import static fvadtest.VadApi1.VadApi2.VadApi;
 public class VadService {
 
     public static final int kChunkSize = 160;
+    public static final int SAMPLE_RATE = 8000;
     private long inst1;
 
     public VadService() {
         this.inst1 = VadApi.fvad_new();
         System.out.println("inst1 = " + inst1);
 
-        int stat1 = VadApi.fvad_set_sample_rate(inst1, 8000);
+        int stat1 = VadApi.fvad_set_sample_rate(inst1, SAMPLE_RATE);
         System.out.println("fvad_set_sample_rate  " + (stat1 == 0 ? "success" : "fail"));
     }
 

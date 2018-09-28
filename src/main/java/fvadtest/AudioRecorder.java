@@ -43,7 +43,7 @@ public class AudioRecorder {
     }
 
       static AudioFormat getAudioFormat() {
-        float sampleRate = 8000.0F;
+        float sampleRate = VadService.SAMPLE_RATE;
         // 8000,11025,16000,22050,44100
         int sampleSizeInBits = 16;
         // 8,16
